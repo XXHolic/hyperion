@@ -1,9 +1,17 @@
 <template>
   <div class="df footer">
-    <div class="footer-nav flex-column flex1 tc">message</div>
-    <div class="footer-nav flex-column flex1 tc">address</div>
-    <div class="footer-nav flex-column flex1 tc">find</div>
-    <div class="footer-nav flex-column flex1 tc">mine</div>
+    <div class="footer-nav flex-column flex1 tc">
+      <router-link to="/">message</router-link>
+    </div>
+    <div class="footer-nav flex-column flex1 tc">
+      <router-link to="/address">address</router-link>
+    </div>
+    <div class="footer-nav flex-column flex1 tc">
+      <router-link to="/find">find</router-link>
+    </div>
+    <div class="footer-nav flex-column flex1 tc">
+      <router-link to="/mine">mine</router-link>
+    </div>
   </div>
 </template>
 
@@ -18,11 +26,10 @@ export default {
 .footer {
   height: 50px;
   justify-content: space-between;
-  background-color: rgba(247,247,247,1);
+  background-color: rgba(247, 247, 247, 1);
 }
 
 .footer-nav {
   justify-content: center;
 }
-
 </style>
