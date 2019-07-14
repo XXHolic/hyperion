@@ -1,9 +1,13 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Message from '../page/message/Message';
-import Find from '../page/find/Find';
-import Mine from '../page/mine/Mine';
-import AddressBook from '../page/addressBook/AddressBook';
+
+const Message = () => import('../page/message/Message');
+const Find = () => import('../page/find/Find');
+const Mine = () => import('../page/mine/Mine');
+const AddressBook = () => import('../page/addressBook/AddressBook');
+// import Find from '../page/find/Find';
+// import Mine from '../page/mine/Mine';
+// import AddressBook from '../page/addressBook/AddressBook';
 
 Vue.use(Router);
 
