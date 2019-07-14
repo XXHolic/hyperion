@@ -1,6 +1,6 @@
 <template>
   <div class="module-container address-book df flex-column">
-    <Header title="AddressBook"></Header>
+    <Header v-bind:title="msg"></Header>
     <div class="flex1">{{ msg }}</div>
 
   </div>
@@ -17,7 +17,7 @@ export default {
   },
   data() {
     return {
-      msg: 'AddressBook',
+      msg: '通讯录',
     };
   },
 };

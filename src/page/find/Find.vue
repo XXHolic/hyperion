@@ -1,6 +1,6 @@
 <template>
   <div class="module-container find df flex-column">
-    <Header title="Find"></Header>
+    <Header v-bind:title="msg"></Header>
     <div class="flex1">{{ msg }}</div>
 
   </div>
@@ -17,7 +17,7 @@ export default {
   },
   data() {
     return {
-      msg: 'Find',
+      msg: '发现',
     };
   },
 };
