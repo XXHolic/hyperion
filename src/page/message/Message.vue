@@ -9,6 +9,7 @@
 <script>
 /* eslint-disable */
 import Header from "../../components/Header";
+const axios = require('axios');
 
 export default {
   name: 'Message',
@@ -18,8 +19,27 @@ export default {
   data() {
     return {
       msg: 'X 信',
+      data: null
     };
   },
+  async created() {
+    let backData = await this.getJSONData("https://xxholic.github.io/lab/data/hemeraData.json");
+    this.data = backData;
+    console.info('this',this);
+    console.info('this.data',this.data);
+    console.info('jsonData',backData);
+  },
+  methods: {
+    getJSONData(url) {
+      return new Promise((resolve,reject)=>{
+        axios.get(url).then(res => {
+          resolve(res);
+        }).catch(err => {
+          reject(err);
+        })
+      });
+    }
+  }
 };
 </script>
 
